@@ -41,5 +41,6 @@ about:
 
 extra:
   recipe-maintainers:
+    - ntessore
     - paddyroddy
     - Saransh-cpp
