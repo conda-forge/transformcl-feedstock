@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: transformcl
-  version: 2022.8.9
-  python_min: 3.9
+  version: "2025.1"
+  python_min: '3.9'
 
 package:
   name: ${{ name|lower }}
@@ -11,22 +11,23 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/transformcl-${{ version }}.tar.gz
-  sha256: 036269bc04dbfd7c90e2acafefe216ee98d6ef1d169fe90e79e92a6305b5718e
+  sha256: 7d9dafee8fe380a66da5131daa9ebf0aa37e002679ad8a0282f25c77313ad6c5
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python ${{ python_min }}.*
-    - setuptools
+    - hatchling
+    - hatch-vcs
     - pip
   run:
     - python >=${{ python_min }}
-    - numpy
-    - flt >=2022.10.7
+    - array-api-compat
+    - flt >=2025.1
 
 tests:
   - python:
