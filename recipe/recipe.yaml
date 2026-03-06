@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: transformcl
-  version: "2025.1"
+  version: "2026.1"
   python_min: '3.9'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/transformcl-${{ version }}.tar.gz
-  sha256: 7d9dafee8fe380a66da5131daa9ebf0aa37e002679ad8a0282f25c77313ad6c5
+  sha256: 14551c33d164f3db24b9141f1f77553182a4b9c789f883476eb33d87ea4d8f13
 
 build:
   number: 0
